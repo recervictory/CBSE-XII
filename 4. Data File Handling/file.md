@@ -24,3 +24,18 @@ Thus, python file handling takes place in the following order:
 2. Performing operation (read, write, etc.) or processing data.
 3. Closing the File.
 
+## 4.4 Opening and Closing Files
+To handle data files in Python, we need to have a `file variable or file object or file handle`. Object can be created by using `open()` function and `file()` function.  To work with file we need to open it. This is done by using the build in `open()` function.
+***
+- **Opening a File -- open():** When we want to read or write from storage devices, we must first open the file. When we open a file, the file must stored on the same folder  that we are start the python. `open()` function takes the **name** of the file (i.e data.txt) as first argument. The second argument indicates the **mode of accessing** the file. This is an optional parameter the default mode is **read mode** or `"r"`.
+    - **Modes for Opening a File :**
+      - Read (`"r"`): to read file,
+      - Write(`"w"`): to write to the file,
+      - append(`"a"`): to write a file in append mode (write at the end of file)
+
+- **Syntax:**
+    > file_object = open(file_name,access_mode)
+- **Example:**
+    > file_handler = open(data.txt,"r")
+***
+
