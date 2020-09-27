@@ -16,4 +16,11 @@ A data files are the files that store data pretraining to a specific application
 1. **Text Files**: A text files stores information in *ASCII or UniCode* characters. In the text files, each lines is terminated,(delimited) with a special characters known known as **EOF(End of Line)** character. In the text files, some internal translations take places when this EOL character is read or written. In Python, by default, this EOL character is newline character ('\n') or carriage-return, newline combination('\r\n').
 2. **Binary Files**: A binary files is just that contains information in same format in which the information is held in memory. i.e., the files content that return to you is raw format (with no translations or specific encoding). In binary files, there is no delimited for lines. Also no translations occurs in binary files. As a result, binary files are faster and easier for a program to read and write in compare with a text files. As long as the people or need to be ported to different type of system, binary files are the best way to store program.
 
-![Binary File Example](./images/binary_file.png)
+
+## 4.3 Data File Operations
+In python file data file operations a strict rule needed to be follow. **After performing desirable operation, it needs to be close so that resources that are tied with the file are freed**.
+Thus, python file handling takes place in the following order:
+1. Opening a file.
+2. Performing operation (read, write, etc.) or processing data.
+3. Closing the File.
+
