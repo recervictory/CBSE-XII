@@ -3,3 +3,5 @@ releated
 file_object.readline  
 readline
 writelines
+print os.getcwd   
+getcwd
