@@ -5,6 +5,12 @@ USER = "root"
 PASSWORD = ""
 DATABASE = "htm"
 
+def create_database():
+    con = mysql.connector.connect(host=HOST, user=USER, password=PASSWORD)
+    cursor = con.cursor()
+    cursor.execute("CREATE DATABASE {}".format(DATABASE))
+    print("\nDatabase Created...")
+
 
 def connect_database():
     try:
@@ -17,5 +23,5 @@ def connect_database():
         cursor = database.cursor(dictionary=True)
         return database, cursor
     except mysql.connector.Error as Error:
-        print("X Error: Database Conncetivity Error.")
+        print("**** Error: Database Conncetivity Error. ****")
         return None, None

@@ -4,12 +4,18 @@ from admin import admin_menu
 from rooms import room_menu
 from customers import customer_menu
 
-from database import connect_database 
+from database import connect_database, create_database
 if __name__ == '__main__':
     database, cursor = connect_database()
     if database is None:
         print("The Database does not exist or not accessible.")
-        sys.exit(1)
+        db_create = input("Do you want to create a Database for this project? (y/n) :")
+        if db_create.lower() == 'y':
+            create_database()
+            print("System Restarting....")
+            sys.exit(1)
+        else:
+            sys.exit(1)
     else:
         print_center("\n-| Connected To local Database |-\n")
     while True:

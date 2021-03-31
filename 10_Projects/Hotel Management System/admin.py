@@ -1,5 +1,6 @@
 import mysql
 import pickle
+from database import create_database
 
 def admin_menu(database, cursor):
     check = check_password()
@@ -12,10 +13,10 @@ def admin_menu(database, cursor):
         print("============================")
         print()
 
-        print("1. Create Rooms Database")
-        print("2. Create Customers Database")
-        print("3. Delete Rooms Database")
-        print("4. Delete Customes Database")
+        print("1. Create Rooms Table")
+        print("2. Create Customers Table")
+        print("3. Delete Rooms Table")
+        print("4. Delete Customes Table")
         print("5. Change Password")
         print("============================")
         print("0. Go Back")
